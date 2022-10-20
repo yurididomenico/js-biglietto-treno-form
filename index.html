@@ -27,41 +27,96 @@
 
   <main>
 
-    <form action="">
-      <label for="inputUtente">Nome e Cognome</label>
-      <input type="text" id="inputUtente">
-      <label for="inputKm">N° Chilometri</label>
-      <input type="text" id="inputKm">
-      <label for="inputEta">Età</label>
-      <select name="" id="inputEta">
-        <option>Minorenne</option>
-        <option>Maggiorenne</option>
-        <option>Over 65</option>
-      </select>
+    
+    <div class="text-center">
+      <h2 class="mt-3">Calcola il prezzo del tuo biglietto</h2>
+      <form action="" class="personal-bg-grey d-inline-block p-3 personal-border-grey">
+        <div class="d-flex">
+          <div class="me-3">
+            <label class="d-block text-center mb-3" for="inputUtente">Nome e Cognome</label>
+            <input type="text" id="inputUtente">
+          </div>
+          <div class="me-3">
+            <label class="d-block text-center mb-3" for="inputKm">N° Chilometri</label>
+            <input type="text" id="inputKm">
+          </div>
+          <div>
+            <label class="d-block text-center mb-3" for="inputEta">Fascia d'età</label>
+            <select name="" id="inputEta" class="mb-3">
+              <option>Minorenne</option>
+              <option>Maggiorenne</option>
+              <option>Over 65</option>
+            </select>
+          </div>
+        </div>
 
 
-      <div class="d-flex">
-        <button onclick="generaBiglietto(); return false" class="rounded-1 p-2 d-block me-2">
-          <i class="fa-solid fa-bars fs-3"></i>
-          <i class="fa-solid fa-cart-shopping fs-1"></i>
-        </button>
-  
-        <button class="rounded-1 p-2 d-block">
-          <a href="#">
-            <i class="fa-solid fa-file"></i>
-            <i class="fa-solid fa-trash"></i>
-          </a>
-        </button>
-  
-      </div>
+        <div class="d-flex">
+          <button onclick="generaBiglietto(); return false" class="rounded-1 p-2 d-block me-3">
+            <i class="fa-solid fa-bars fs-3"></i>
+            <i class="fa-solid fa-cart-shopping fs-2"></i>
+          </button>
 
-    </form>
+          <button class="rounded-1 p-2 d-block">
+            <a href="#">
+              <i class="fa-solid fa-file"></i>
+              <i class="fa-solid fa-trash"></i>
+            </a>
+          </button>
+
+        </div>
+
+      </form>
+    </div>
+
+    <hr>
+
+    <div class="text-center">
+      <h2 class="mt-3">Il tuo Biglietto</h2>
+      <form action="" class="personal-bg-grey d-inline-block p-3 personal-border-grey">
+        <div class="d-flex">
+          <div class="me-3">
+            <label class="d-block text-center mb-3" for="inputUtente">Nome e Cognome</label>
+            <input type="text" id="inputUtente">
+          </div>
+          <div class="me-3">
+            <label class="d-block text-center mb-3" for="inputKm">N° Chilometri</label>
+            <input type="text" id="inputKm">
+          </div>
+          <div>
+            <label class="d-block text-center mb-3" for="inputEta">Fascia d'età</label>
+            <select name="" id="inputEta" class="mb-3">
+              <option>Minorenne</option>
+              <option>Maggiorenne</option>
+              <option>Over 65</option>
+            </select>
+          </div>
+        </div>
+
+
+        <div class="d-flex">
+          <button onclick="generaBiglietto(); return false" class="rounded-1 p-2 d-block me-3">
+            <i class="fa-solid fa-bars fs-3"></i>
+            <i class="fa-solid fa-cart-shopping fs-2"></i>
+          </button>
+
+          <button class="rounded-1 p-2 d-block">
+            <a href="#">
+              <i class="fa-solid fa-file"></i>
+              <i class="fa-solid fa-trash"></i>
+            </a>
+          </button>
+
+        </div>
+
+      </form>
+    </div>
 
     <div>
       <div id="risultatoNome"></div>
       <div id="risultatoBiglietto"></div>
       <div id="risultatoSconto"></div>
-      <hr>
+      
       <div id="risultatoPrezzo"></div>
 
     </div>
