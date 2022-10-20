@@ -96,12 +96,37 @@ Sottoproblemi
 
 console.log('Ciao');
 
-let inputUtente = prompt('Nome e Cognome: ');
-let inputKm = prompt('Numero Chilometri: ');
-let inputEta = prompt('Età: ');
-console.log(inputUtente, inputKm, inputEta);
+let inputUtente = document.getElementById(inputUtente);
+let inputKm = document.getElementById(inputKm);
+let inputEta = document.getElementById(inputEta);
+// console.log(inputUtente, inputKm, inputEta);
 
+let prezzoBiglietto = 0.21 * parseInt(inputKm);
+let sconto;
+let prezzoTotale;
 
+// ________________ IF Minorenne ________________
+if(inputEta < 18)
+{
+    sconto = prezzoBiglietto * 0.20;
+    prezzoTotale = prezzoBiglietto - sconto;
+}
+// ________________ IF Maggiorenne ________________
+else if(inputEta >= 65)
+{
+    sconto = prezzoBiglietto * 0.40;
+    prezzoTotale = prezzoBiglietto - sconto;
+}
+// ________________ IF Over65 ________________
+else
+{
+    prezzoTotale = prezzoBiglietto;
+}
+
+prezzoTotale = parseFloat(prezzoTotale).toFixed(2);
+sconto = parseFloat(sconto).toFixed(2);
+
+console.log(prezzoTotale)
 
 
 
