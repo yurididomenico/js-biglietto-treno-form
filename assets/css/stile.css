@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Reset */
+*
+{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+}
+img
+{
+  display: block;
+}
+a
+{
+  color: black;
+}
+/* |||||||||| INIZIO |||||||||| */
+body
+{
+  background-color: rgb(225, 225, 225);
+}
+.personal-bg-yellow
+{
+  background-color: #f1d879;
+}
+.personal-border-yellow
+{
+  border-width: 2px;
+  border-style: solid;
+  border-color: #cdb44f;
+}
+.personal-width-
+{
+  width: 170px;
+}
+
+/* |||||||||| HEADER |||||||||| */
+header
+{
+  background-color: rgb(243, 217, 113);
+  padding: 10px;
+  box-shadow: 2px 0 20px rgb(0, 0, 0) ;
+}
+header h2
+{
+  margin: 0;
+}
+
+
+/* |||||||||| NAV |||||||||| */
+
+
+
+/* |||||||||| MAIN |||||||||| */
+
+main
+{
+  padding: 20px;
+}
+
+.form
+{
+  border: 2px solid rgb(180, 180, 180);
+  background-color: white;
+}
+
+.form input
+{
+  display: block;
+  margin-bottom: 40px;
+}
+
+.form label
+{
+  font-weight: bold;
+}
+
+.immagini img
+{
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+
+/* |||||||||| FOOTER |||||||||| */
+
+
+
+/* |||||||||| AREA TEST |||||||||| */
+
+
+
+
+/* |||||||||| AREA TEST |||||||||| */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Fine */
