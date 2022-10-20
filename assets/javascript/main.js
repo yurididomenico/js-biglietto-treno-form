@@ -149,6 +149,7 @@ function generaBiglietto() {
     document.getElementById('risultatoCodiceCP').innerHTML = `${codiceCP}`;
     document.getElementById('risultatoPrezzo').innerHTML = `${prezzoTotale} &euro;`;
     
+    document.getElementById('stampaBiglietto').classList.remove("d-none");
     
 
 
