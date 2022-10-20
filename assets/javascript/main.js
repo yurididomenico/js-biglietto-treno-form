@@ -82,8 +82,24 @@ Sottoproblemi
 //     }
 // }
 
+// ---------------------------------------------------------------------------
 
 
+// Scrivere un programma che chieda all’utente:
+// - Nome e cognome
+// - Il numero di chilometri da percorrere
+// - Età del passeggero
+// Calcolare il prezzo totale del biglietto di viaggio, secondo le seguenti regole:
+// - il prezzo del biglietto è definito in base ai km (0.21 € al km)
+// - va applicato uno sconto del 20% per i minorenni
+// - va applicato uno sconto del 40% per gli over 65.
+
+console.log('Ciao');
+
+let inputUtente = prompt('Nome e Cognome: ');
+let inputKm = prompt('Numero Chilometri: ');
+let inputEta = prompt('Età: ');
+console.log(inputUtente, inputKm, inputEta);
 
 
 
