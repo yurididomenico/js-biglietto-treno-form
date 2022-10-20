@@ -28,14 +28,43 @@
   <main>
 
     <form action="">
+      <label for="inputUtente">Nome e Cognome</label>
       <input type="text" id="inputUtente">
+      <label for="inputKm">N° Chilometri</label>
       <input type="text" id="inputKm">
-      <input type="text" id="inputEta">
+      <label for="inputEta">Età</label>
+      <select name="" id="inputEta">
+        <option>Minorenne</option>
+        <option>Maggiorenne</option>
+        <option>Over 65</option>
+      </select>
 
-      
-      
-      
+
+      <div class="d-flex">
+        <button onclick="generaBiglietto(); return false" class="rounded-1 p-2 d-block me-2">
+          <i class="fa-solid fa-bars fs-3"></i>
+          <i class="fa-solid fa-cart-shopping fs-1"></i>
+        </button>
+  
+        <button class="rounded-1 p-2 d-block">
+          <a href="#">
+            <i class="fa-solid fa-file"></i>
+            <i class="fa-solid fa-trash"></i>
+          </a>
+        </button>
+  
+      </div>
+
     </form>
+
+    <div>
+      <div id="risultatoNome"></div>
+      <div id="risultatoBiglietto"></div>
+      <div id="risultatoSconto"></div>
+      <hr>
+      <div id="risultatoPrezzo"></div>
+
+    </div>
 
   </main>
 

@@ -16,7 +16,8 @@ img
 }
 a
 {
-  color: black;
+  color: inherit;
+  text-decoration: none !important;
 }
 /* |||||||||| INIZIO |||||||||| */
 body

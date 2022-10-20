@@ -61,7 +61,7 @@ Sottoproblemi
 //     {
 //         document.getElementById('risultatoSconto').innerHTML = `Hai risparmiato ben: ${sconto} &euro;`;
 //     }
-    
+
 
 //     // console.log('prezzoTotale')
 //     document.getElementById('risultatoPrezzo').innerHTML = `Prezzo Totale: ${prezzoTotale} &euro;`;
@@ -73,7 +73,7 @@ Sottoproblemi
 
 // function displayswitch()
 // {
-    
+
 
 //     if (x.style.display === "none") {
 //       x.style.display = "block";
@@ -93,41 +93,49 @@ Sottoproblemi
 // - il prezzo del biglietto è definito in base ai km (0.21 € al km)
 // - va applicato uno sconto del 20% per i minorenni
 // - va applicato uno sconto del 40% per gli over 65.
+function generaBiglietto() {
+    console.log('Ciao');
 
-console.log('Ciao');
+    let inputUtente = document.getElementById('inputUtente').value;
+    let inputKm = document.getElementById('inputKm').value;
+    let inputEta = document.getElementById('inputEta').value;
+    console.log(inputUtente, inputKm, inputEta);
 
-let inputUtente = document.getElementById(inputUtente);
-let inputKm = document.getElementById(inputKm);
-let inputEta = document.getElementById(inputEta);
-// console.log(inputUtente, inputKm, inputEta);
+    let prezzoBiglietto = 0.21 * parseInt(inputKm);
+    let sconto;
+    let prezzoTotale;
 
-let prezzoBiglietto = 0.21 * parseInt(inputKm);
-let sconto;
-let prezzoTotale;
+    // ________________ IF Minorenne ________________
+    if (inputEta == 'Minorenne') {
+        sconto = prezzoBiglietto * 0.20;
+        prezzoTotale = prezzoBiglietto - sconto;
+    }
+    // ________________ IF Maggiorenne ________________
+    else if (inputEta == 'Over 65') {
+        sconto = prezzoBiglietto * 0.40;
+        prezzoTotale = prezzoBiglietto - sconto;
+    }
+    // ________________ IF Over65 ________________
+    else {
+        prezzoTotale = prezzoBiglietto;
+        sconto = 0;
+    }
 
-// ________________ IF Minorenne ________________
-if(inputEta < 18)
-{
-    sconto = prezzoBiglietto * 0.20;
-    prezzoTotale = prezzoBiglietto - sconto;
+    // Conversione String > Float (2 decimali)
+    prezzoTotale = parseFloat(prezzoTotale).toFixed(2);
+    sconto = parseFloat(sconto).toFixed(2);
+
+    //Stampa Risultato Finale
+    document.getElementById('risultatoNome').innerHTML = `Nome: ${inputUtente}`;
+    document.getElementById('risultatoBiglietto').innerHTML = `Prezzo Biglietto: ${prezzoBiglietto}`;
+    document.getElementById('risultatoSconto').innerHTML = `Sconto: ${sconto} &euro;`;
+    document.getElementById('risultatoPrezzo').innerHTML = `Prezzo Totale: ${prezzoTotale} &euro;`;
+    
+    
+
+
+
 }
-// ________________ IF Maggiorenne ________________
-else if(inputEta >= 65)
-{
-    sconto = prezzoBiglietto * 0.40;
-    prezzoTotale = prezzoBiglietto - sconto;
-}
-// ________________ IF Over65 ________________
-else
-{
-    prezzoTotale = prezzoBiglietto;
-}
-
-prezzoTotale = parseFloat(prezzoTotale).toFixed(2);
-sconto = parseFloat(sconto).toFixed(2);
-
-console.log(prezzoTotale)
-
 
 
 
