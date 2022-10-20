@@ -105,6 +105,10 @@ function generaBiglietto() {
     let sconto;
     let prezzoTotale;
 
+    let offerta;
+    let carrozza;
+    let codiceCP;
+
     // ________________ IF Minorenne ________________
     if (inputEta == 'Minorenne') {
         sconto = prezzoBiglietto * 0.20;
@@ -121,14 +125,25 @@ function generaBiglietto() {
         sconto = 0;
     }
 
+    if(inputEta == 'Minorenne' || inputEta == 'Over 65')
+    {
+        offerta = `Biglietto Scontato`;
+    }
+    else
+    {
+        offerta = `Biglietto Standard`;
+    }
+
     // Conversione String > Float (2 decimali)
     prezzoTotale = parseFloat(prezzoTotale).toFixed(2);
     sconto = parseFloat(sconto).toFixed(2);
 
     //Stampa Risultato Finale
-    document.getElementById('risultatoNome').innerHTML = `Nome: ${inputUtente}`;
-    document.getElementById('risultatoBiglietto').innerHTML = `Prezzo Biglietto: ${prezzoBiglietto}`;
-    document.getElementById('risultatoSconto').innerHTML = `Sconto: ${sconto} &euro;`;
+    document.getElementById('risultatoNome').innerHTML = `NOME PASSEGGERO ${inputUtente}`;
+    document.getElementById('risultatoOfferta').innerHTML = `Offerta ${offerta}`;
+    document.getElementById('risultatoCarrozza').innerHTML = `Carrozza ${'1'}`;
+    document.getElementById('risultatoCodiceCP').innerHTML = `Codice CP ${'1'}`;
+    document.getElementById('risultatoBiglietto').innerHTML = `Prezzo Biglietto: ${prezzoBiglietto} &euro;`;
     document.getElementById('risultatoPrezzo').innerHTML = `Prezzo Totale: ${prezzoTotale} &euro;`;
     
     
