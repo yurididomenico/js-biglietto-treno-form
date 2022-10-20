@@ -106,7 +106,7 @@ function generaBiglietto() {
     let prezzoTotale;
 
     let offerta;
-    let carrozza = Math.floor(Math.random() * 10);
+    let carrozza = Math.floor(Math.random() * 10) +1;
     let codiceCP = Math.floor(Math.random() * 100000);
 
     // ________________ IF Minorenne ________________
